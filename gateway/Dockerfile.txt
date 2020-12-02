@@ -1,0 +1,8 @@
+FROM mongo-express:latest
+
+WORKDIR /entidadesMongo
+COPY ./target/entidadesMongo-0.0.1-SNAPSHOT.jar /entidadesMongo
+
+EXPOSE 8763
+
+CMD ["java", "-jar", "entidadesMongo-0.0.1-SNAPSHOT.jar"]
